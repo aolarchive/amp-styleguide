@@ -1,0 +1,42 @@
+.swatches {
+
+	> * {
+		padding: 10px;
+	}
+
+	input {
+		background: transparent;
+		border: 0;
+		cursor: text;
+	}
+
+	> *:nth-child(1) {
+		background: {
+			color: $color-brand;
+		}
+		input {
+			color: lighten($color-brand, 40%);
+		}
+	}
+
+	> *:nth-child(2) {
+		background: {
+			color: $color-action;
+		}
+		input {
+			color: lighten($color-action, 40%);
+		}
+	}
+
+	> *:nth-child(3) {
+		background: {
+			color: adjust-hue($color-action, 50);
+		}
+	}
+
+	> *:nth-child(4) {
+		background: {
+			color: $color-function;
+		}
+	}
+}

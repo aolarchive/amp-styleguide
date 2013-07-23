@@ -1,0 +1,10 @@
+.logos {
+	li {
+		@include inline-block();
+		margin: 0 1em;
+	}
+
+	img {
+		height: 50px;
+	}
+}

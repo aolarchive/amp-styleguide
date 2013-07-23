@@ -1,0 +1,183 @@
+// Layout Rules
+// ============
+// CSS, by its very nature, is used to lay elements out on the page. However,
+// there is a distinction between layouts dictating the major and minor
+// components of a page. The minor components—such as a callout, or login form,
+// or a navigation item—sit within the scope of major components such as a
+// header or footer. I refer to the minor components as Modules and will dive
+// into those in the next section. The major components are referred to as
+// Layout styles.
+
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Major layout styles such as header and footer are traditionally
+// styled using ID selectors but take the time to think about the elements that
+// are common across all components of the page and use class selectors where
+// appropriate.
+//
+// http://smacss.com/book/type-layout
+
+.no-underline {
+	text: {
+		decoration: none;
+	}
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  -ms-flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.flex-item {
+  -webkit-flex: 1 0 50%;
+  -moz-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+
+  &.stretch{
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+	&.col1 {
+    -webkit-flex: 1 0 100%;
+    -moz-flex: 1 0 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+	}
+
+  &.col3{
+    -webkit-flex: 1 0 33.3%;
+    -moz-flex: 1 0 33.3%;
+    -ms-flex: 1 0 33.3%;
+    flex: 1 0 33.3%;
+  }
+
+  &.col4{
+    -webkit-flex: 1 0 25%;
+    -moz-flex: 1 0 25%;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
+  }
+
+  &.col5{
+    -webkit-flex: 1 0 20%;
+    -moz-flex: 1 0 20%;
+    -ms-flex: 1 0 20%;
+    flex: 1 0 20%;
+  }
+
+  &.colAuto{
+    -webkit-flex: 1 0 auto;
+    -moz-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+
+  &.col100{
+    -webkit-flex: 1 0 100px;
+    -moz-flex: 1 0 100px;
+    -ms-flex: 1 0 100px;
+    flex: 1 0 100px;
+  }
+
+  &.col200{
+    -webkit-flex: 1 0 200px;
+    -moz-flex: 1 0 200px;
+    -ms-flex: 1 0 200px;
+    flex: 1 0 200px;
+  }
+
+  &.col300{
+    -webkit-flex: 1 0 300px;
+    -moz-flex: 1 0 300px;
+    -ms-flex: 1 0 300px;
+    flex: 1 0 300px;
+  }
+
+  &.col400{
+    -webkit-flex: 1 0 400px;
+    -moz-flex: 1 0 400px;
+    -ms-flex: 1 0 400px;
+    flex: 1 0 400px;
+  }
+
+  &.col500{
+    -webkit-flex: 1 0 500px;
+    -moz-flex: 1 0 500px;
+    -ms-flex: 1 0 500px;
+    flex: 1 0 500px;
+  }
+
+  &.col600{
+    -webkit-flex: 1 0 600px;
+    -moz-flex: 1 0 600px;
+    -ms-flex: 1 0 600px;
+    flex: 1 0 600px;
+  }
+
+}
+
+html {
+}
+
+body {
+}
+
+.container {
+	@extend .flex-container;
+	margin: 0;
+}
+
+header {
+	background: {
+		color: $color-brand;
+	}
+	border: {
+		bottom: 10px solid $color-action;
+	}
+	color: $color-text-light;
+	padding: 20px;
+}
+
+nav {
+	/*@extend .flex-item;*/
+
+	background: {
+		color: $color-function;
+	}
+	padding: $gutter 0;
+	width: 200px;
+
+	a {
+		@extend .no-underline;
+		color: darken($color-function, 30%);
+		display: block;
+		padding: 5px $gutter;
+
+		@include transition(all 0.1s);
+
+		&:hover {
+			@extend .no-underline;
+			background: {
+				color: $color-brand;
+			}
+			color: $color-text-light;
+		}
+	}
+}
+
+.content {
+	@extend .flex-item;
+	@extend .stretch;
+	padding: $gutter;
+}

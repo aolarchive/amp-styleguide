@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<title>AMP Style Guide</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<header>
+		<h1 class="logo"><img src="images/logos/amp-emanations.png"></h1>
+	</header>
+
+	<div class="container">
+
+		<nav>
+			<ul>
+				<li><a href="#color">Color</a></li>
+				<li><a href="#typeface">Typeface</a></li>
+				<li><a href="#layout">Layout</a></li>
+				<li><a href="#frameworks">Frameworks</a></li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<h2>Style Guide</h2>
+
+			<blockquote>
+				<p>We want to sing the man at the wheel, the ideal axis of which crosses the earth, itself hurled along its orbit.</p>
+				<footer>
+					&ndash; <cite>F. T. Marinetti, The Futurist Manifesto</cite>
+				</footer>
+			</blockquote>
+
+			<h3 id="logos">Logos</h3>
+
+			<ul class="logos">
+				<li><a href="images/logos/amp-emanations.png"><img src="images/logos/amp-emanations.png"></a></li>
+				<li><a href="images/logos/amp-text.png"><img src="images/logos/amp-text.png"></a></li>
+				<li><a href="images/logos/amp-justamp.png"><img src="images/logos/amp-justamp.png"></a></li>
+			</ul>
+
+			<h3 id="color">Color</h3>
+
+			<ul class="swatches">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+
+			<h3 id="typeface">Typeface</h3>
+
+			<p><strong>Special Titles:</strong> <a href="http://www.google.com/fonts/specimen/Audiowide">Audiowide</a></p>
+
+			<blockquote>
+				<h1>Lorem Ipsum</h1>
+			</blockquote>
+
+			<p><strong>Body Text:</strong> <a href="http://www.google.com/fonts/specimen/Ubuntu">Ubuntu</a></p>
+
+			<blockquote>
+				<h2>Lorem Ipsum</h2>
+				<p>Dolor sit amet.</p>
+			</blockquote>
+
+			<h3 id="layout">Layout</h3>
+
+			<p>Header, left-nav, content.</p>
+
+			<h3 id="frameworks">Frameworks</h3>
+
+			<ul>
+				<li><a href="http://angularjs.org/">Angular JS</a></li>
+				<li><a href="http://jquery.com/">jQuery</a></li>
+				<li><a href="http://twitter.github.io/bootstrap/">Bootstrap</a></li>
+				<li><a href="http://requirejs.org/">RequireJS</a></li>
+				<li><a href="http://compass-style.org/">Compass</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/lib/jquery.color.js"></script>
+	<script>
+		$(document).ready(function () {
+			var $swatches = $('.swatches');
+
+			$swatches.children().each(function () {
+				var $this = $(this);
+				var color = $this.css('background-color');
+				color = $.Color(color);
+				console.log('color', color);
+
+				$('<input>', {
+					disabled: true,
+					value: color.toHslaString()
+				}).appendTo($this);
+
+				$('<input>', {
+					disabled: true,
+					value: color.toHexString()
+				}).appendTo($this);
+			});
+		});
+	</script>
+</body>
+</html>

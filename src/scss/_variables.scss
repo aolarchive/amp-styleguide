@@ -1,0 +1,47 @@
+// Turn debugging on and off. Use a conditional switch for any
+// debugging-oriented // oriented settings in your stylesheets.
+//
+// Example: @if $debug == true { } @else { }
+// $debug: true;
+$debug: false;
+
+// Fonts
+// http://www.google.com/fonts#UsePlace:use/Collection:Ubuntu
+// http://www.google.com/fonts#UsePlace:use/Collection:Ubuntu+Mono
+// http://www.google.com/fonts#UsePlace:use/Collection:Audiowide
+// http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
+@import url(
+	"http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Ubuntu+Mono|Audiowide|Open+Sans:400,700"
+);
+
+$typeface-special: 'Audiowide', 'Ubuntu', sans-serif;
+$typeface-headline: 'Ubuntu', Helvetica, Arial, sans-serif;
+$typeface-text: $typeface-headline;
+$typeface-code: 'Ubuntu Mono', Monaco, monospace;
+$typeface-plain: 'Open Sans', Helvetica, Arial, sans-serif;
+
+$typeface: $typeface-text;
+
+// Color Scheme
+// ============
+
+// Common
+$color-text-light: #fff;
+$color-text-dark: #333;
+$color-text: $color-text-dark;
+
+$color-background: black;
+
+$color-brand: #333;
+$color-action: #ec2228;
+$color-function: hsl(0, 0%, 90%);
+
+$gutter: 25px;
+
+// Links
+$color-link-default: blue;
+$color-link-visited: purple;
+$color-link-hover: cornflowerblue;
+$color-link-active: royalblue;
+
+$color-selection: deeppink;

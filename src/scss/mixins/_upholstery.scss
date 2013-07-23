@@ -1,0 +1,23 @@
+// The web's swankiest CSS background pattern
+// Deemed by Paul Irish to be "a pretty heavy CSS gradient"
+// http://lea.verou.me/css3patterns/#upholstery
+
+@mixin upholstery($hue, $size) {
+  @include background(
+    radial-gradient(hsl($hue, 100%, 27%) 4%, hsl($hue, 100%, 18%) 9%, hsla($hue, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl($hue, 100%, 27%) 4%, hsl($hue, 100%, 18%) 8%, hsla($hue, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla($hue, 100%, 30%, 0.8) 20%, hsla($hue, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla($hue, 100%, 30%, 0.8) 20%, hsla($hue, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla($hue, 100%, 20%, 1) 35%, hsla($hue, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla($hue, 100%, 20%, 1) 35%, hsla($hue, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla($hue, 100%, 15%, 0.7), hsla($hue, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla($hue, 100%, 15%, 0.7), hsla($hue, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla($hue, 100%, 20%, 0) 49%, hsla($hue, 100%, 0%, 1) 50%, hsla($hue, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla($hue, 100%, 20%, 0) 49%, hsla($hue, 100%, 0%, 1) 50%, hsla($hue, 100%, 20%, 0) 70%) 0 0
+  );
+  background: {
+    attachment: fixed;
+    color: hsl($hue, 100%, 10%);
+    size: $size $size;
+  }
+}
