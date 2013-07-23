@@ -1,21 +1,7 @@
-Grunt Compass Boilerplate
-=========================
+amp-styleguide
+==============
 
-A boilerplate Grunt JS setup for websites using Compass.
-
-Documentation
-=============
-
-This is a boilerplate Grunt project intended to provide an ideal starting point for projects that want to use Compass for their `.scss` files and organize them elegantly using [SMACSS](http://smacss.com) principles. This is a nascent project and contributions are welcome.
-
-Custom Tasks
-------------
-
-The boilerplate contains, at the moment, one custom task.
-
-### Sass Directory Imports
-
-It's frequently useful to be able to `@import` a whole directory of Sass files, such as modules, in your `.scss` files. The `sass-directory-imports` task can write `@import` statements to designated `.scss` files to make such imports possible.
+AMP's official style guide.
 
 Development Setup
 =================
@@ -61,4 +47,4 @@ License
 
 Copyright © 2013, AOL Inc. All rights reserved.
 
-https://github.com/aol/grunt-compass-boilerplate/blob/master/LICENSE-BSD
+https://github.com/aol/amp-styleguide/blob/master/LICENSE-BSD
