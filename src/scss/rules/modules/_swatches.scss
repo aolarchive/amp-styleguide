@@ -36,6 +36,42 @@
 
 	> *:nth-child(4) {
 		background: {
+			color: adjust-hue($color-action, 80);
+		}
+	}
+
+	> *:nth-child(5) {
+		background: {
+			color: adjust-hue($color-action, 150);
+		}
+	}
+
+	> *:nth-child(6) {
+		background: {
+			color: adjust-hue($color-action, 180);
+		}
+	}
+
+	> *:nth-child(7) {
+		background: {
+			color: adjust-hue($color-action, 200);
+		}
+		input {
+			color: lighten(adjust-hue($color-action, 200), 40%);
+		}
+	}
+
+	> *:nth-child(8) {
+		background: {
+			color: adjust-hue($color-action, 290);
+		}
+		input {
+			color: lighten($color-action, 40%);
+		}
+	}
+
+	> *:nth-child(9) {
+		background: {
 			color: $color-function;
 		}
 	}

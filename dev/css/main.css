@@ -2339,5 +2339,33 @@ nav a:hover {
 }
 /* line 37, ../../src/scss/rules/modules/_swatches.scss */
 .swatches > *:nth-child(4) {
+  background-color: #afec22;
+}
+/* line 43, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(5) {
+  background-color: #22ec81;
+}
+/* line 49, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(6) {
+  background-color: #22ece6;
+}
+/* line 55, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(7) {
+  background-color: #22afec;
+}
+/* line 59, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(7) input {
+  color: #def3fc;
+}
+/* line 64, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(8) {
+  background-color: #c422ec;
+}
+/* line 68, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(8) input {
+  color: #fcdedf;
+}
+/* line 73, ../../src/scss/rules/modules/_swatches.scss */
+.swatches > *:nth-child(9) {
   background-color: #e6e6e6;
 }
