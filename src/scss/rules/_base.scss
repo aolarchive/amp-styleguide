@@ -21,13 +21,16 @@ body {
 	font: {
 		family: $typeface-text;
 		size: 18px;
+		weight: 300;
 	}
+	line-height: 1.5;
 }
 
 h1 {
 	font: {
 		family: $typeface-special;
-		size: 3em;
+		size: 2em;
+		weight: 400;
 	}
 	text: {
 		transform: uppercase;
@@ -35,32 +38,28 @@ h1 {
 }
 
 h2 {
-	color: darken($color-function, 30%);
 	font: {
+		family: $typeface-special;
 		size: 2em;
+		weight: 300;
+	}
+	text: {
+		transform: uppercase;
 	}
 }
 
 h3 {
-	color: darken($color-function, 30%);
 	font: {
-		size: 1.5em;
+		family: $typeface-special;
+		size: 2em;
+		weight: 200;
 	}
-	margin: {
-		bottom: 1em;
-		top: 1em;
+	text: {
+		transform: uppercase;
 	}
-	padding: 10px 0;
 }
 
 blockquote {
-	background: {
-		color: lighten($color-function, 5%);
-	}
-	@include border-radius(5px);
-	margin: 1em 0;
-	padding: 1em;
-
 	footer {
 		margin: {
 			top: 1em;
@@ -71,5 +70,13 @@ blockquote {
 p {
 	margin: {
 		bottom: 1em;
+	}
+}
+
+ul {
+	list-style-type: square;
+	margin: {
+		bottom: 1em;
+		top: 1em;
 	}
 }

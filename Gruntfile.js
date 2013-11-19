@@ -32,6 +32,12 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: 'src/js/', src: ['**/*.js'], dest: 'dev/js/' },
 					{ expand: true, cwd: 'src/js/', src: ['**/*.js'], dest: 'dist/js/' }
 				]
+			},
+			fonts: {
+				files: [
+					{ expand: true, cwd: 'assets/fonts/', src: ['**/*'], dest: 'dev/fonts/' },
+					{ expand: true, cwd: 'assets/fonts/', src: ['**/*'], dest: 'dist/fonts/' }
+				]
 			}
 		},
 
@@ -76,7 +82,7 @@ module.exports = function (grunt) {
 				jshintrc: '.jshintrc'
 			},
 			grunt: ['./Gruntfile.js'],
-			src: ['src/js/**/*.js']
+			src: ['src/js/**/*.js', '!src/js/**/*.js']
 		},
 
 		watch: {

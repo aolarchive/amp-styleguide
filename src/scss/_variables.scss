@@ -14,7 +14,7 @@ $debug: false;
 	"http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Ubuntu+Mono|Audiowide|Open+Sans:400,700"
 );
 
-$typeface-special: 'Audiowide', 'Ubuntu', sans-serif;
+$typeface-special: 'Amplify', 'Ubuntu', sans-serif;
 $typeface-headline: 'Ubuntu', Helvetica, Arial, sans-serif;
 $typeface-text: $typeface-headline;
 $typeface-code: 'Ubuntu Mono', Monaco, monospace;
@@ -26,7 +26,7 @@ $typeface: $typeface-text;
 // ============
 
 // Common
-$color-text-light: #fff;
+$color-text-light: hsl(0, 0%, 95%);
 $color-text-dark: #333;
 $color-text: $color-text-dark;
 

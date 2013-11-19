@@ -1,8 +1,26 @@
 .logo {
+	color: $color-action;
 	font: {
-		size: 0;
+		size: 36px;
+		weight: 400;
 	}
-	img {
-		height: 50px;
+	margin: 0;
+
+	&.subbrand {
+		> b {
+			color: $color-text-light;
+			font: {
+				family: 'Amplify';
+				weight: 200
+			}
+			letter: {
+				spacing: -0.05em;
+			}
+
+			margin: {
+				left: -0.25em;
+			}
+		}
 	}
 }
+

@@ -136,6 +136,7 @@ body {
 .container {
 	@extend .flex-container;
 	margin: 0;
+	width: 100%;
 }
 
 header {
@@ -155,12 +156,24 @@ nav {
 	background: {
 		color: $color-function;
 	}
+	font: {
+		family: $typeface-special;
+		weight: 300;
+	}
 	padding: $gutter 0;
+	text: {
+		transform: lowercase;
+	}
 	width: 200px;
+
+	> ul {
+		margin: 0;
+		padding: 0;
+	}
 
 	a {
 		@extend .no-underline;
-		color: darken($color-function, 30%);
+		color: darken($color-function, 40%);
 		display: block;
 		padding: 5px $gutter;
 
@@ -180,4 +193,32 @@ nav {
 	@extend .flex-item;
 	@extend .stretch;
 	padding: $gutter;
+}
+
+.section {
+	margin: {
+		bottom: 4em;
+	}
+}
+
+.example {
+	border: {
+		color: hsl(0, 0, 80%);
+		style: solid;
+		width: 1px 1px 0 1px;
+	}
+	@include border-radius(4px 4px 0 0);
+	margin: {
+		top: 2em;
+	}
+	padding: ($gutter / 2) $gutter;
+}
+
+.example + .highlight {
+	pre {
+		@include border-radius(0 0 4px 4px);
+		margin: {
+			bottom: 2em;
+		}
+	}
 }
