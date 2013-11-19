@@ -23,11 +23,11 @@ d88P     888  "Y88888P"  88888888
 // If you don't need to change any of the variables that affect Bootstrap
 // itself, using the compiled version will make Compass builds considerably
 // faster.
-@import "../../components/sass-bootstrap/bootstrap-2.3.2.css";
+/*@import "../../components/sass-bootstrap/bootstrap-2.3.2.css";*/
 
 // If you do want to affect Bootstrap variables (because that's an awesome
 // option to have), use the .scss version.
-// @import "../../components/sass-bootstrap/lib/bootstrap";
+@import "../../components/sass-bootstrap/lib/bootstrap";
 
 @import "lib/font-awesome";
 
